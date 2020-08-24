@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义按钮控件 TKButton -->
+    <declare-styleable name="TKButton">
+        <attr name="backgroundColor" format="color" />
+        <!-- 按钮的边角角度，默认0 -->
+        <attr name="radius" format="dimension" />
+        <attr name="leftTopRadius" format="dimension" />
+        <attr name="leftBottomRadius" format="dimension" />
+        <attr name="rightTopRadius" format="dimension" />
+        <attr name="rightBottomRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,3 @@
+include ':tkui'
+include ':app'
+rootProject.name = "TKUI-Android"
