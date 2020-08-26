@@ -2,8 +2,14 @@
 <resources>
 
     <color name="tkui_white">#FFFFFFFF</color>
-    <color name="tkui_blue">#FF2080CB</color>
-    <!--灰色-->
+    <color name="tkui_blue">#FF0B82F1</color>
+    <color name="tkui_blue_light">#FFE5F2FF</color>
+    <color name="tkui_red">#FFFF404C</color>
+    <color name="tkui_red_light">#FFFFEFEF</color>
+    <color name="tkui_orange">#FFFF5600</color>
+    <color name="tkui_orange_light">#FFFFF4ED</color>
+    <color name="tkui_green">#0DB94E</color>
+    <color name="tkui_green_light">#FFE9FFF0</color>
     <color name="tkui_gray">#FFDFE1E4</color>
 
 </resources>
