@@ -7,7 +7,6 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import androidx.appcompat.widget.AppCompatButton
-import cn.shper.tkui.util.DensityUtils
 
 /**
  * Author : Shper
@@ -66,7 +65,7 @@ class TKButton @JvmOverloads constructor(context: Context,
                                                   leftBottomRadius.toFloat(),
                                                   leftBottomRadius.toFloat())
     } else {
-      gradientDrawable.cornerRadius = context.resources.getDimension(R.dimen.tkui_dp_30)
+      gradientDrawable.cornerRadius = context.resources.getDimension(R.dimen.tkui_30_dp)
     }
 
     setBackgroundDrawable(gradientDrawable)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 自定义按钮控件 TKButton -->
-    <declare-styleable name="TKButton">
+    <declare-styleable name="TKButton" tools:ignore="ResourceName">
         <attr name="backgroundColor" format="color" />
         <!-- 按钮的边角角度，默认0 -->
         <attr name="radius" format="dimension" />
@@ -10,6 +10,12 @@
         <attr name="leftBottomRadius" format="dimension" />
         <attr name="rightTopRadius" format="dimension" />
         <attr name="rightBottomRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TKTitleBar" tools:ignore="ResourceName">
+        <attr name="android:background" />
+        <attr name="title" format="string"/>
+        <attr name="hideLine" format="boolean" />
     </declare-styleable>
 
 </resources>

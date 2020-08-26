@@ -1,12 +1,18 @@
 package cn.shper.tkui.example
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import cn.shper.tkui.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
+
+    titlebar_example_btn.setOnClickListener {
+      startActivity(Intent(this, TitleBarExampleActivity::class.java))
+    }
   }
 }
