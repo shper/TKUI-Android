@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="TKUI.Theme.Blue.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar" tools:ignore="ResourceName">
+        <item name="colorPrimaryDark">@color/tkui_blue</item>
+    </style>
+
+</resources>
