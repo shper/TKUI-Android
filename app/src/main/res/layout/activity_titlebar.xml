@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".example.MainActivity">
+    tools:context=".MainActivity">
 
     <cn.shper.tkui.TKTitleBar
         android:layout_width="match_parent"
         android:layout_height="44dp"
+        app:style="blue"
         app:title="This is TitleBar" />
 
 </RelativeLayout>

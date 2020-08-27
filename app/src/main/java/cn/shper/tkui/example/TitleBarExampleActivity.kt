@@ -2,7 +2,6 @@ package cn.shper.tkui.example
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import cn.shper.tkui.R
 
 /**
  * Author: Shper

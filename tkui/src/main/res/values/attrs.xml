@@ -14,8 +14,12 @@
 
     <declare-styleable name="TKTitleBar" tools:ignore="ResourceName">
         <attr name="android:background" />
-        <attr name="title" format="string"/>
+        <attr name="title" format="string" />
         <attr name="hideLine" format="boolean" />
+        <attr name="style" format="string">
+            <enum name="normal" value="0" />
+            <enum name="blue" value="1" />
+        </attr>
     </declare-styleable>
 
 </resources>

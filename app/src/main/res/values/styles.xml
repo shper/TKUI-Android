@@ -8,6 +8,7 @@
     </style>
 
     <style name="ActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/tkui_blue</item>
     </style>
 
 </resources>

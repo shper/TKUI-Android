@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.RelativeLayout
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
+import cn.shper.tkui.model.TKTitleBarStyle
 import kotlinx.android.synthetic.main.tkui_layout_titlebar.view.*
 
 /**
@@ -19,12 +20,15 @@ class TKTitleBar @JvmOverloads constructor(context: Context,
                                            defStyleAttr: Int = 0) :
   RelativeLayout(context, attrs, defStyleAttr) {
 
-  private lateinit var leftView: View
-  private lateinit var titleView: TKIconTextView
+  private var leftView: TKIconTextView
+  private var titleView: TKIconTextView
 
   init {
     View.inflate(context, R.layout.tkui_layout_titlebar, this)
     val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TKTitleBar)
+
+    leftView = tkui_titlebar_left_icon
+    titleView = tkui_titlebar_title_tv
 
     initTitleBar(typedArray)
     initLeftView(typedArray)
@@ -36,14 +40,24 @@ class TKTitleBar @JvmOverloads constructor(context: Context,
   }
 
   fun initTitleBar(typedArray: TypedArray) {
-    if (!typedArray.hasValue(R.styleable.TKTitleBar_android_background)) {
-      setBackgroundColor(context.resources.getColor(R.color.tkui_white))
+    if (typedArray.hasValue(R.styleable.TKTitleBar_style)) {
+      when (typedArray.getInt(R.styleable.TKTitleBar_style, 0)) {
+        TKTitleBarStyle.BLUE.ordinal -> {
+          leftView.setTextColor(context.resources.getColor(R.color.tkui_white))
+          titleView.setTextColor(context.resources.getColor(R.color.tkui_white))
+          setBackgroundColor(context.resources.getColor(R.color.tkui_blue))
+        }
+
+        TKTitleBarStyle.NORMAL.ordinal -> {
+          if (!typedArray.hasValue(R.styleable.TKTitleBar_android_background)) {
+            setBackgroundColor(context.resources.getColor(R.color.tkui_white))
+          }
+        }
+      }
     }
   }
 
   fun initLeftView(typedArray: TypedArray) {
-    leftView = tkui_titlebar_left_icon
-
     setLeftIcon(R.string.tkui_icon_back)
 
     setLiftOnClickListener(OnClickListener {
@@ -57,8 +71,6 @@ class TKTitleBar @JvmOverloads constructor(context: Context,
   }
 
   fun initTitle(typedArray: TypedArray) {
-    titleView = tkui_titlebar_title_tv
-
     val title = typedArray.getString(R.styleable.TKTitleBar_title)
     title?.let {
       titleView.text = title
@@ -66,9 +78,7 @@ class TKTitleBar @JvmOverloads constructor(context: Context,
   }
 
   fun setLeftIcon(@StringRes resId: Int) {
-    if (leftView is TKIconTextView) {
-      (leftView as TKIconTextView).setText(resId)
-    }
+    leftView.setText(resId)
   }
 
   fun setLeftIconVisibility(visible: Boolean) {
