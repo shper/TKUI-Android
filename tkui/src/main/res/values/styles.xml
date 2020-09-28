@@ -4,4 +4,10 @@
         <item name="colorPrimaryDark">@color/tkui_blue</item>
     </style>
 
+    <style name="TKUI.Theme.Blue.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar" tools:ignore="ResourceName">
+        <item name="colorPrimary">@color/tkui_blue</item>
+        <item name="colorPrimaryDark">@color/tkui_blue</item>
+        <item name="colorAccent">@color/tkui_blue</item>
+    </style>
+
 </resources>
