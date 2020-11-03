@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "cn.shper.tkui.excample"
+        applicationId "cn.shper.tkui.example"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
